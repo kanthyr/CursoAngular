@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="form" fxLayout="Column">
+
+        <mat-form-field class="field">
+            <mat-label>Ingresa tu Nombre</mat-label>
+            <input matInput type="text" formControlName="username">
+            <mat-error *ngIf="username?.hasError('required') && (username?.dirty || username?.touched)">
+                <p>El campo no puede estar vacio</p>
+            </mat-error>
+            <mat-error *ngIf="username?.invalid && (username?.dirty || username?.touched)">
+                <p>Nombre, no puede contener números</p>
+            </mat-error>
+        </mat-form-field>
+    
+        <mat-form-field class="field">
+            <mat-label>Ingresa tu E-mail</mat-label>
+            <input matInput type="email" formControlName="email">
+            <mat-error *ngIf="email?.hasError('email') && (email?.dirty || email?.touched)">
+                <p>Ingresa un correo electronico válido.</p>
+            </mat-error>
+            <mat-error *ngIf="email?.hasError('required') && (email?.dirty || email?.touched)">
+                <p>El campo no puede estar vácio.</p>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field">
+            <mat-label>Ingresa tu Telefono</mat-label>
+            <input matInput type="tel" formControlName="telephone">
+            <mat-icon matSuffix></mat-icon>
+            <mat-error *ngIf="telephone?.invalid && (telephone?.dirty || telephone?.touched)">
+                <p>Ingresa un telefono válido</p>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field">
+            <mat-label>Ingresa tu Mensaje</mat-label>
+            <input matInput type="text" formControlName="message">
+            <mat-error *ngIf="message?.invalid && (message?.dirty || message?.touched)">
+                <p>El mensaje no puede estar vacio o ser mayor a 40 caracteres</p>
+            </mat-error>
+        </mat-form-field>
+    
+        <div class="buttons">
+            <button (click)="onSendMessage()" mat-stroked-button>Enviar mensaje</button>
+            <button (click)="onCancel()" mat-stroked-button>Cancelar</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+body{
+    background-color:brown;
+}
+
+#contenedor{
+    width: 100%;
+    flex-flow: row wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_link
+{
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    border:2px solid black;
+    padding: 1px;
+    margin: 5px;
+}
+
+.contenedor_img
+{
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}

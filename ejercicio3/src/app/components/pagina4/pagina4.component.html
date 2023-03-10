@@ -1,0 +1,10 @@
+<div>
+    <div fxFlex="25">
+        <app-hijo [title]="padreTitle" (newItemEvent)="onEventPadre($event)"></app-hijo>
+    </div>
+
+    <div fxFlex="25">
+        <input [(ngModel)]="padreTitle">
+    </div>
+    {{padreTitleHijo}}
+</div>

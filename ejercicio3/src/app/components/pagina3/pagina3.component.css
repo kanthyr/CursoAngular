@@ -1,0 +1,35 @@
+.redCube{
+background-color: red;
+}
+
+.greenCube{
+background-color: green;
+}
+
+.blueCube{
+background-color: blue;
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.redCubeCSS{
+    background-color: red;
+    width: 30%;
+}
+    
+.greenCubeCSS{
+    background-color: green;
+    width: 30%;
+}
+    
+.blueCubeCSS{
+    background-color: blue;
+    width: 30%;
+}

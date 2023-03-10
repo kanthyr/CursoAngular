@@ -1,0 +1,37 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: top;
+    align-items: center;
+    background-size: 100vh;
+    background-color: orange;
+}
+
+.table {
+    width: 90%;
+    height: flex;
+    border: 10px solid rgba(0, 0, 0, .7);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.contactB{
+    padding: 25px;
+}
+
+mat-paginator {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+table {
+    width: 100%;
+    height: flex;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+button {
+    background-color: rgb(255, 213, 134);
+}

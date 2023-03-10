@@ -1,0 +1,37 @@
+<p>principal works!</p>
+
+<div>
+    <table>
+    <tr>
+        <th>Número</th>
+        <th>Nombre</th>
+        <th>Código</th>
+    </tr>
+    <tr *ngFor="let city of cities">
+        
+        <td>
+            <div [ngSwitch]="city.id">
+                <p class="text-success" *ngSwitchCase="1">{{city.id}}</p>
+                <p class="text-danger" *ngSwitchCase="2">{{city.id}}</p>
+                <p class="text-info" *ngSwitchCase="3">{{city.id}}</p>
+                <p class="text-default" *ngSwitchDefault>{{city.id}}</p>
+            </div>
+        </td>
+
+        <td>
+            {{city.name}}
+        </td>
+
+        <td>
+            <div *ngIf="city.id_state==1;then content else other_content"></div>
+            <ng-template #content>
+                Este tiene id: 1
+            </ng-template>
+            <ng-template #other_content>
+                {{city.id_state}}
+            </ng-template>
+            
+        </td>
+    </tr>
+</table>
+</div>

@@ -1,0 +1,30 @@
+<mat-sidenav-container class="example-container"> 
+    <mat-sidenav #sidenav role="navigation" class="sidenav"
+        fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)"> 
+        <mat-toolbar class="toolbar"
+            fxLayoutAlign="center center"> 
+        </mat-toolbar> 
+        <mat-nav-list class="nav-list" fxLayout="column"
+            fxLayoutAlign="space-between center">
+            <div class="div-tabs-a"> 
+                <a mat-list-item routerLink="/admin/user" fxHide.xs="true"> Usuarios </a> 
+                <a mat-list-item routerLink="/admin/user" fxHide="true" fxShow.xs="true" (click)="sidenav.toggle()"> Usuarios </a> 
+                <a mat-list-item class="tabs-menu mt-3 div-logout" (click)="onLogOut()"> 
+                    <mat-icon class="mr-3">reply</mat-icon>Cerrar sesión
+                </a> 
+            </div>
+        </mat-nav-list> 
+    </mat-sidenav> 
+    <mat-sidenav-content style="min-height: 100vh"> 
+        <mat-toolbar fxShow.lg="false"
+            fxShow.md="false" fxShow.xl="false">
+            <div> 
+                <button mat-icon-button (click)="sidenav.toggle()"> 
+                    <mat-icon>menu</mat-icon> 
+                </button> 
+            </div>
+        </mat-toolbar> 
+        <router-outlet></router-outlet> 
+    </mat-sidenav-content>
+</mat-sidenav-container>
